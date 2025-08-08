@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran - RADEN.site</title>
+  <meta name="description" content="Silakan pilih metode pembayaran: Dana, OVO, GoPay, atau QRIS.">
+  <link rel="icon" href="https://files.catbox.moe/mpxz12.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+    }
+    .faq-question {
+      border-left: 4px solid #38bdf8;
+      padding-left: 1rem;
+      font-weight: bold;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.4s ease-out;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <header class="text-center py-10" data-aos="fade-down">
+    <img src="https://files.catbox.moe/mpxz12.jpg" alt="Logo" class="w-20 h-20 mx-auto rounded-full shadow mb-4">
+    <h1 class="text-3xl font-bold">Silakan Memilih Metode Pembayaran</h1>
+    <p class="text-gray-400 mt-2">Transfer cepat & aman</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 space-y-12">
+
+    <!-- QRIS -->
+    <section class="bg-gray-900 p-6 rounded-xl text-center shadow-lg" data-aos="zoom-in">
+      <h2 class="text-xl font-bold mb-4">QRIS</h2>
+      <img src="https://files.catbox.moe/r11f0q.png" alt="QRIS" class="mx-auto w-40 mb-4 rounded shadow" />
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="https://wa.me/628123456789?text=Halo,%20saya%20sudah%20melakukan%20pembayaran%20via%20QRIS." class="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full font-semibold">Konfirmasi WhatsApp</a>
+        <a download="qris-RADEN.jpg" href="https://files.catbox.moe/3iqxs2.jpg" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-full font-semibold" onclick="showToast('QRIS berhasil diunduh!')">Unduh QRIS</a>
+      </div>
+    </section>
+
+    <!-- Dana -->
+    <section class="bg-gray-900 p-6 rounded-xl shadow-lg flex items-center gap-6" data-aos="fade-up">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhFGUE707IY8kQVOwZL99RIFJISIL2YbPOWiHuiFhx2dTNRArgrYhsxmvffkr06UuMmW_bH_jvz5Fwmu_2ulgwM3LZDNrk5ffAMdh2Idupas0uEpaasSyzx1vqelkojB0xM8e-3nsGVLdRGZniVPwjOlnwGY1g8pPl7SY6gLq0lMDft2Wv8X9RiVspg=s16000" alt="Logo Dana" class="w-14 h-14 bg-white rounded-full p-1">
+      <div>
+        <h2 class="text-lg font-bold">Dana</h2>
+        <p class="mb-2">0831-8746-6781</p>
+        <button onclick="copyText('083187466781')" class="bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-full text-sm font-medium">Salin Nomor</button>
+      </div>
+    </section>
+
+    <!-- OVO -->
+    <section class="bg-gray-900 p-6 rounded-xl shadow-lg flex items-center gap-6" data-aos="fade-up">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3RUZ-QuuPspWRcDG92Wd8YK2LfzWgr56qAcGQm7D-R7zZOvbL6mShwyT5YLBOMrTJ7eMFzFrMbmD5yA0S4Cb90axxPLchbl94_p6KPPkKq0S57C7SiGTK5uiQja84i-GLXgUd47N2E2hz/w320-h311/IMG_20210625_221444.jpg" alt="Logo OVO" class="w-14 h-14 bg-white rounded-full p-1">
+      <div>
+        <h2 class="text-lg font-bold">OVO</h2>
+        <p class="mb-2">0838-9625-4706</p>
+        <button onclick="copyText('0838962547066789')" class="bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-full text-sm font-medium">Salin Nomor</button>
+      </div>
+    </section>
+
+    <!-- GoPay -->
+    <section class="bg-gray-900 p-6 rounded-xl shadow-lg flex items-center gap-6" data-aos="fade-up">
+      <img src="https://cdn.brandfetch.io/idQqAF303b/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Logo GoPay" class="w-14 h-14 bg-white rounded-full p-1">
+      <div>
+        <h2 class="text-lg font-bold">GoPay</h2>
+        <p class="mb-2">0831-7622-4436</p>
+        <button onclick="copyText('083176224436')" class="bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-full text-sm font-medium">Salin Nomor</button>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-gray-900 p-6 rounded-xl space-y-4" data-aos="fade-up">
+      <h2 class="text-xl font-bold mb-4 text-center">FAQ</h2>
+      <div>
+        <p class="faq-question">Berapa lama verifikasi setelah transfer?</p>
+        <p class="ml-4 text-gray-300 mt-1">Biasanya dalam 1–5 menit, maksimal 15 menit.</p>
+      </div>
+      <div>
+        <p class="faq-question">Harus konfirmasi manual?</p>
+        <p class="ml-4 text-gray-300 mt-1">Ya, silakan klik tombol WhatsApp setelah membayar.</p>
+      </div>
+      <div>
+        <p class="faq-question">Apakah bisa bayar lewat ShopeePay?</p>
+        <p class="ml-4 text-gray-300 mt-1">Ya, melalui QRIS atau ke GoPay.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-400 py-6 mt-12" data-aos="fade-in">
+    &copy; 2025 RADEN.site · Layanan Pembayaran
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+    <span id="toast-msg">Tersalin!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      showToast("Nomor berhasil disalin!");
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toast-msg");
+      toastMsg.textContent = message;
+      toast.classList.remove("opacity-0");
+      toast.classList.add("opacity-100");
+      toast.classList.add("pointer-events-auto");
+
+      setTimeout(() => {
+        toast.classList.remove("opacity-100");
+        toast.classList.add("opacity-0");
+        toast.classList.remove("pointer-events-auto");
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
